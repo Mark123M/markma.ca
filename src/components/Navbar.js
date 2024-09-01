@@ -1,5 +1,5 @@
 import { animate } from "motion";
-import { Box, Grid2, Icon, Typography } from "@mui/material";
+import { Box, Grid2, Typography } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
@@ -28,11 +28,8 @@ const nameStyles = {
 
 function Navbar() {
   return (
-    <Box display={"flex"} width={"100%"}>
-      <Box sx={nameStyles} width={"10px"}>
-        <img className="name" src="" style={{width: "100%", filter:"opacity(80%)", objectFit: "contain", transform: "translate(0, 2px)"}}></img>
-      </Box>
-      <Grid2 container spacing={3} marginLeft={"auto"}>
+    <Box display={"inline-block"} marginLeft={"15px"}>
+      <Grid2 container spacing={1}>
         <EmailIcon className="icon" color="mytext" sx={iconStyles}/>
         <LinkedInIcon className="icon" color="mytext" sx={iconStyles}/>
         <GitHubIcon className="icon" color="mytext" sx={iconStyles}/>

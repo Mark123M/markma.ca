@@ -16,7 +16,7 @@ const titleStyles = {
 
 function Section({text}) {
   return (
-    <div class="text-divider" style={{marginTop: "10px"}}>
+    <div className="text-divider" style={{marginTop: "10px"}}>
       <Typography color="mytext" fontFamily={"Poppins"} fontWeight={500} sx={titleStyles}>
         Experiences
       </Typography>
@@ -28,7 +28,6 @@ function App() {
   return (
     <Box display={"flex"} width={"100%"} height={"100%"} paddingTop={"20px"} justifyContent={"center"}>
       <Box display={"flex"} flexDirection={"column"} width={"90%"} maxWidth={950}>
-        <Navbar/>
         <Bio/>
         <Section text={"Experiences"}/>
         <Post></Post>

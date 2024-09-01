@@ -1,0 +1,16 @@
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 100% !important;
+}
+
+.carousel-slide.shown {
+  filter: opacity(100%);
+  z-index: 10;
+  transition: filter 0.5s;
+}
+
+.carousel-slide.hidden {
+  filter: opacity(0%);
+  z-index: 9;
+  transition: filter 0.5s;
+}
