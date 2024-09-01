@@ -11,6 +11,11 @@ iframe {
 
 .carousel-slide.hidden {
   filter: opacity(0%);
+  width: 0;
+  height: 0;
   z-index: 9;
-  transition: filter 0.5s;
+}
+
+.icon.selected {
+  color: #F76464
 }

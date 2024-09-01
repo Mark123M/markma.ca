@@ -3,6 +3,7 @@ import { animate } from "motion";
 import { Box, Grid2, Typography, Divider } from "@mui/material";
 import ArrowCircleLeftTwoToneIcon from '@mui/icons-material/ArrowCircleLeftTwoTone';
 import ArrowCircleRightTwoToneIcon from '@mui/icons-material/ArrowCircleRightTwoTone';
+import CircleIcon from '@mui/icons-material/Circle';
 import './post.css'
 const containerStyles = {
   flexDirection: {
@@ -110,34 +111,49 @@ function Carousel({sources}) {
     <Box
       display={"flex"}
       justifyContent={"center"}
-      bgcolor={"green"}
-      position={"relative"}
-      marginTop={"-25px"}
+      flexDirection={"column"}
     >
-      {sources.map((s, idx) => { // s: [source, type, caption]
-        return (
-          <Box className={`carousel-slide ${curSlide == idx ? "shown" : "hidden"}`} width={"100%"} key={s[2]} position={"absolute"} display={"flex"} flexDirection={"column"} alignItems={"center"} justifyContent={"center"}>
-            <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={captionStyles}>{s[2]}</Typography>
-            <Box display={"flex"} width={"100%"} alignItems={"center"}>
-              <Box onClick={setPrevSlide}>
-                <ArrowCircleLeftTwoToneIcon className="icon" color="mytext" sx={iconStyles} />
-              </Box>
-              <Box width={"100%"}>
-                {// image
-                s[1] == 0 ?
-                  <img src={s[0]}/> :
-                    (s[1] == 1 ? 
-                      <video preload="auto"/> :
-                      <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
-                }
-              </Box>
-              <Box onClick={setNextSlide}>
-                <ArrowCircleRightTwoToneIcon className="icon" color="mytext" sx={iconStyles}/>
+      <Box
+        display={"flex"}
+        flexDirection={"row"}
+        position={"relative"}
+        marginTop={"-25px"}
+        alignItems={"center"}
+      >
+        <Box onClick={setPrevSlide}>
+          <ArrowCircleLeftTwoToneIcon className="icon" color="mytext" sx={iconStyles} />
+        </Box>
+        {sources.map((s, idx) => { // s: [source, type, caption]
+          return (
+            <Box className={`carousel-slide ${curSlide == idx ? "shown" : "hidden"}`} width={"100%"} key={s[2]} position={"relative"} display={"flex"} flexDirection={"column"} alignItems={"center"}>
+              <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={captionStyles}>{s[2]}</Typography>
+              <Box display={"flex"} width={"100%"} alignItems={"center"}>
+                <Box width={"100%"}>
+                  {// image
+                  s[1] == 0 ?
+                    <img src={s[0]}/> :
+                      (s[1] == 1 ? 
+                        <video preload="auto"/> :
+                        <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
+                  }
+                </Box>
               </Box>
             </Box>
-          </Box>
-        )
-      })}
+          )
+        })}
+        <Box onClick={setNextSlide}>
+          <ArrowCircleRightTwoToneIcon className="icon" color="mytext" sx={iconStyles}/>
+        </Box>
+      </Box>
+      <Box 
+        display={"flex"}
+        justifyContent={"center"}
+        marginTop={"10px"}
+      >
+        {sources.map((s, idx) => { 
+          return <CircleIcon key={`carousel-dot-${s[2]}`} sx={{marginLeft: "1%"}} onClick={()=>setCurSlide(idx)} className={`icon ${curSlide == idx ? "selected" : ""}`} color="mytext" fontSize="small"/>
+        })}
+      </Box>
     </Box>
   )
 }

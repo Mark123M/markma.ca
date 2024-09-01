@@ -30,7 +30,15 @@ const faceStyles = {
   transform: "translate(0px, 0px)",
   aspectRatio: "1/1"
 }
-const textStyles = {}
+const bioStyles = {
+  marginLeft: {
+    xs: "0px",
+    sm: "0px",
+    md: "20px",
+    lg: "20px",
+    xl: "20px"
+  }
+}
 const titleStyles = {
   fontSize: {
     xs: "24px",
@@ -56,7 +64,7 @@ function Bio() {
         <Box display={"flex"} sx={faceStyles}>
             <img src="./face.jpg" style={{width: "100%", height: "auto", objectFit: "contain"}}></img>
         </Box>
-        <Box display={"flex"} marginLeft={"20px"} flexDirection={"column"} sx = {textStyles}>
+        <Box display={"flex"} marginLeft={"20px"} flexDirection={"column"} sx = {bioStyles}>
           <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
             <Box>
               <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles} >

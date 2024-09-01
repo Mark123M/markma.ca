@@ -30,7 +30,7 @@ function App() {
       <Box display={"flex"} flexDirection={"column"} width={"90%"} maxWidth={950}>
         <Bio/>
         <Section text={"Experiences"}/>
-        <Post></Post>
+        <Post />
       </Box>
     </Box>
   );
