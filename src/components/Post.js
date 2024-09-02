@@ -64,10 +64,10 @@ const captionStyles = {
   transform: "translate(0%, -12%)"
 }
 
-function Points({points}) {
+function Points({points, flatten}) {
   return (
     <Box sx={{transform: "translate(-10px, -15px)"}}>
-      <ul>
+      <ul style={{marginBottom: "0px"}}>
         {points.map((p, idx) => (
           <li key={p}><Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>{p}</Typography></li>
         ))}
@@ -129,12 +129,11 @@ function Carousel({sources}) {
         display={"flex"}
         flexDirection={"row"}
         position={"relative"}
-        marginTop={"-25px"}
         alignItems={"center"}
       >
-        {sources.length > 0 && <Box onClick={setPrevSlide}>
+        <Box onClick={setPrevSlide}>
           <ArrowCircleLeftTwoToneIcon className="icon" color="mytext" sx={iconStyles} />
-        </Box>}
+        </Box>
         {sources.map((s, idx) => { // s: [source, type, caption]
           return (
             <Box className={`carousel-slide ${curSlide == idx ? "shown" : "hidden"}`} width={"100%"} key={s[2]} position={"relative"} display={"flex"} flexDirection={"column"} alignItems={"center"}>
@@ -151,41 +150,40 @@ function Carousel({sources}) {
             </Box>
           )
         })}
-        {sources.length > 0 && <Box onClick={setNextSlide}>
+        <Box onClick={setNextSlide}>
           <ArrowCircleRightTwoToneIcon className="icon" color="mytext" sx={iconStyles}/>
-        </Box>}
+        </Box>
       </Box>
-      {sources.length > 0 && <Box 
+      <Box 
         display={"flex"}
         justifyContent={"center"}
         marginTop={"5px"}
+        paddingBottom={"2%"}
       >
         {sources.map((s, idx) => { 
           return <CircleIcon key={`carousel-dot-${s[2]}`} sx={dotStyles} onClick={()=>setCurSlide(idx)} className={`icon ${curSlide == idx ? "selected" : ""}`} color="mytext"/>
         })}
-      </Box>}
+      </Box>
     </Box>
   )
 }
 
 function Post({title, date, desc, points, sources}) {
   return (
-    <Box display={"flex"} width={"100%"} sx = {containerStyles}>
-        <Box display={"flex"} flexDirection={"column"} sx = {textStyles}>
-          <Box display={"flex"} alignItems={"flex-end"}>
-            <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
-              {title}
-            </Typography>
-            <Typography color={"#704e8b"} fontFamily={"Poppins"} marginLeft={"auto"} fontWeight={400} sx={captionStyles}>
-              {date}
-            </Typography>
-          </Box>
-          <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
-            {desc}
-          </Typography>
-          <Points points = {points} date = {date}/>
-          <Carousel sources={sources}/>
-        </Box>
+    <Box display={"flex"} width={"100%"} flexDirection={"column"} sx = {textStyles}>
+      <Box display={"flex"} alignItems={"flex-end"}>
+        <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
+          {title}
+        </Typography>
+        <Typography color={"#704e8b"} fontFamily={"Poppins"} marginLeft={"auto"} fontWeight={400} sx={captionStyles}>
+          {date}
+        </Typography>
+      </Box>
+      <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
+        {desc}
+      </Typography>
+      <Points points = {points} date = {date} flatten={sources.length == 0}/>
+      {sources.length > 0 && <Carousel sources={sources}/>}
     </Box>
   )
 }

@@ -100,7 +100,8 @@ const projectPosts = [
       "Implemented code generation for functions, control flow, and dynamic memory allocation with free lists",
       "Created loaders and static linkers with relocation algorithms to resolve external symbol exports and usage"
     ],
-    sources: []
+    sources: [
+    ]
   },
   {
     title: "Chess Engine",
@@ -121,10 +122,12 @@ function App() {
       <Box display={"flex"} flexDirection={"column"} width={"90%"} maxWidth={950}>
         <Bio />
         <Section text={"Experiences"} />
+        <Box marginTop={"3px"}></Box>
         {experiencePosts.map((p) => (
           <Post title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
         ))}
         <Section text={"Projects"} />
+        <Box marginTop={"3px"}></Box>
         {projectPosts.map((p) => (
           <Post title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
         ))}
