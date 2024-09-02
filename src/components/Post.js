@@ -69,7 +69,7 @@ function Points({points, flatten}) {
     <Box sx={{transform: "translate(-10px, -15px)"}}>
       <ul style={{marginBottom: "0px"}}>
         {points.map((p, idx) => (
-          <li key={p}><Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>{p}</Typography></li>
+          <li key={p}><Typography color="mytitle" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>{p}</Typography></li>
         ))}
       </ul>
     </Box>
@@ -179,7 +179,7 @@ function Post({title, date, desc, points, sources}) {
           {date}
         </Typography>
       </Box>
-      <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
+      <Typography color="mytitle" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
         {desc}
       </Typography>
       <Points points = {points} date = {date} flatten={sources.length == 0}/>

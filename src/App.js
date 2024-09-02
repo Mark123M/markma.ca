@@ -118,7 +118,7 @@ const projectPosts = [
 
 function App() {
   return (
-    <Box display={"flex"} width={"100%"} height={"100%"} paddingTop={"20px"} justifyContent={"center"} bgcolor={"#fff0d8"}>
+    <Box display={"flex"} width={"100%"} height={"100%"} paddingTop={"20px"} justifyContent={"center"} bgcolor={"#FAE7C4"}>
       <Box display={"flex"} flexDirection={"column"} width={"90%"} maxWidth={950}>
         <Bio />
         <Section text={"Experiences"} />

@@ -73,7 +73,7 @@ function Bio() {
             </Box>
             <Navbar/>
           </Box>
-          <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
+          <Typography color="mytitle" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
               I'm a third year Computer Science student at the University of Waterloo. I'm passionate for developing high performance software, modelling complex systems, and exploring low level programming. I have over a year of professional experience in game programming and fullstack development, and I'm open to work in Summer 2025.
           </Typography>
         </Box>
