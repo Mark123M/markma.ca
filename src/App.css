@@ -12,7 +12,7 @@
 .text-divider::after {
   content: '';
   height: 3px;
-  background-color: silver;
+  background-color: #ea946b;
   flex-grow: 1;
 }
 
@@ -25,6 +25,6 @@
 }
 
 .icon:hover {
-  filter: brightness(2.2);
+  filter: brightness(1.7);
   cursor: pointer
 }

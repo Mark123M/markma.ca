@@ -30,9 +30,15 @@ function Navbar() {
   return (
     <Box display={"inline-block"} marginLeft={"15px"}>
       <Grid2 container spacing={1}>
-        <EmailIcon className="icon" color="mytext" sx={iconStyles}/>
-        <LinkedInIcon className="icon" color="mytext" sx={iconStyles}/>
-        <GitHubIcon className="icon" color="mytext" sx={iconStyles}/>
+        <a style={{textDecoration: 'none', color: 'black'}} href="https://www.github.com/Mark123M" target="_blank" rel="noopener noreferrer">
+          <GitHubIcon className="icon" color="mytext" sx={iconStyles}/>
+        </a>
+        <a style={{textDecoration: 'none', color: 'black'}} href="mailto:m32ma@uwaterloo.ca" target="_blank" rel="noopener noreferrer">
+          <EmailIcon className="icon" color="mytext" sx={iconStyles}/>
+        </a>
+        <a style={{textDecoration: 'none', color: 'black'}} href="https://www.linkedin.com/in/markma04/" target="_blank" rel="noopener noreferrer">
+          <LinkedInIcon className="icon" color="mytext" sx={iconStyles}/>
+        </a>
       </Grid2>
     </Box>
   )

@@ -17,7 +17,7 @@ const titleStyles = {
 function Section({text}) {
   return (
     <div className="text-divider" style={{marginTop: "10px"}}>
-      <Typography color="mytext" fontFamily={"Poppins"} fontWeight={500} sx={titleStyles}>
+      <Typography color="mytitle" bgcolor={"#e9946b"} borderRadius={"3%"} padding="0 1% 0 1%" fontFamily={"Poppins"} fontWeight={500} sx={titleStyles}>
         {text}
       </Typography>
     </div>
@@ -118,7 +118,7 @@ const projectPosts = [
 
 function App() {
   return (
-    <Box display={"flex"} width={"100%"} height={"100%"} paddingTop={"20px"} justifyContent={"center"}>
+    <Box display={"flex"} width={"100%"} height={"100%"} paddingTop={"20px"} justifyContent={"center"} bgcolor={"#fff0d8"}>
       <Box display={"flex"} flexDirection={"column"} width={"90%"} maxWidth={950}>
         <Bio />
         <Section text={"Experiences"} />

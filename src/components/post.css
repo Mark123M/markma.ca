@@ -23,5 +23,9 @@ iframe {
 }
 
 .icon.selected {
-  color: #F76464
+  color: #e9946b;
+}
+
+.icon.selected:hover {
+  filter:brightness(1)
 }

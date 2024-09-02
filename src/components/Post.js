@@ -172,10 +172,10 @@ function Post({title, date, desc, points, sources}) {
   return (
     <Box display={"flex"} width={"100%"} flexDirection={"column"} sx = {textStyles}>
       <Box display={"flex"} alignItems={"flex-end"}>
-        <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
+        <Typography color={"mytitle"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
           {title}
         </Typography>
-        <Typography color={"#704e8b"} fontFamily={"Poppins"} marginLeft={"auto"} fontWeight={400} sx={captionStyles}>
+        <Typography color={"mytext"} fontFamily={"Poppins"} marginLeft={"auto"} fontWeight={400} sx={captionStyles}>
           {date}
         </Typography>
       </Box>

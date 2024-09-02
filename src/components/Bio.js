@@ -67,7 +67,7 @@ function Bio() {
         <Box display={"flex"} marginLeft={"20px"} flexDirection={"column"} sx = {bioStyles}>
           <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
             <Box>
-              <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles} >
+              <Typography color={"mytitle"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles} >
                 Hello, I'm Mark!
               </Typography>
             </Box>
