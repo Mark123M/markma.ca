@@ -37,11 +37,11 @@ const textStyles = {
 }
 const titleStyles = {
   fontSize: {
-    xs: "18px",
-    sm: "18px",
-    md: "22px",
-    lg: "22px",
-    xl: "22px"
+    xs: "16px",
+    sm: "16px",
+    md: "20px",
+    lg: "20px",
+    xl: "20px"
   }
 }
 const bodyStyles = {
@@ -61,6 +61,7 @@ const captionStyles = {
     lg: "14px",
     xl: "14px",
   },
+  transform: "translate(0%, -12%)"
 }
 
 function Points({points}) {
@@ -77,13 +78,24 @@ function Points({points}) {
 
 const iconStyles = {
   fontSize: {
-    xs: 55,
-    sm: 55,
+    xs: 50,
+    sm: 50,
     md: 60,
     lg: 65,
     xl: 65,
   },
   fontWeight: 600
+}
+
+const dotStyles = {
+  fontSize: {
+    xs: 15,
+    sm: 15,
+    md: 20,
+    lg: 20,
+    xl: 20
+  },
+  marginLeft: "1%"
 }
 
 function Carousel({sources}) {
@@ -120,9 +132,9 @@ function Carousel({sources}) {
         marginTop={"-25px"}
         alignItems={"center"}
       >
-        <Box onClick={setPrevSlide}>
+        {sources.length > 0 && <Box onClick={setPrevSlide}>
           <ArrowCircleLeftTwoToneIcon className="icon" color="mytext" sx={iconStyles} />
-        </Box>
+        </Box>}
         {sources.map((s, idx) => { // s: [source, type, caption]
           return (
             <Box className={`carousel-slide ${curSlide == idx ? "shown" : "hidden"}`} width={"100%"} key={s[2]} position={"relative"} display={"flex"} flexDirection={"column"} alignItems={"center"}>
@@ -131,56 +143,47 @@ function Carousel({sources}) {
                 <Box width={"100%"}>
                   {// image
                   s[1] == 0 ?
-                    <img src={s[0]}/> :
-                      (s[1] == 1 ? 
-                        <video preload="auto"/> :
-                        <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>)
+                    <img src={s[0]} width={"100%"} style={{objectFit: "cover"}}/> :
+                    <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   }
                 </Box>
               </Box>
             </Box>
           )
         })}
-        <Box onClick={setNextSlide}>
+        {sources.length > 0 && <Box onClick={setNextSlide}>
           <ArrowCircleRightTwoToneIcon className="icon" color="mytext" sx={iconStyles}/>
-        </Box>
+        </Box>}
       </Box>
-      <Box 
+      {sources.length > 0 && <Box 
         display={"flex"}
         justifyContent={"center"}
-        marginTop={"10px"}
+        marginTop={"5px"}
       >
         {sources.map((s, idx) => { 
-          return <CircleIcon key={`carousel-dot-${s[2]}`} sx={{marginLeft: "1%"}} onClick={()=>setCurSlide(idx)} className={`icon ${curSlide == idx ? "selected" : ""}`} color="mytext" fontSize="small"/>
+          return <CircleIcon key={`carousel-dot-${s[2]}`} sx={dotStyles} onClick={()=>setCurSlide(idx)} className={`icon ${curSlide == idx ? "selected" : ""}`} color="mytext"/>
         })}
-      </Box>
+      </Box>}
     </Box>
   )
 }
 
-function Post() {
-  const points = [
-    "Constructed a modular utility AI system by applying dynamic response curves to score and execute behavior tree nodes, building 9 opponent agents for challenge arenas",
-    "Created aerial dodge, grab, and throw with improved AABB collision responses and a new combo system",
-    "Built a tutorial NPC with integrated input capturer and sequencer tool to edit & replay 12 challenge solutions",
-    "Profiled and optimized asset pipeline by abstracting resource loading and disposal into mandatory lifecycle methods for 45 game entity classes, resolving WebGL memory leaks of 4MB/match",
-    "Developed middleware plugins for hot module replacement by applying fallback behavior to active modules during code updates, caching 3D scenes and reducing reload times by 40-fold"
-  ]
-  const sources = [
-    ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "utility AI system"],
-    ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "aerial dodge, grab, and throw"],
-    ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "tutorial NPC"]
-  ]
+function Post({title, date, desc, points, sources}) {
   return (
     <Box display={"flex"} width={"100%"} sx = {containerStyles}>
         <Box display={"flex"} flexDirection={"column"} sx = {textStyles}>
-          <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
-            AI Arena:
-          </Typography>
+          <Box display={"flex"} alignItems={"flex-end"}>
+            <Typography color={"#704e8b"} fontFamily={"Poppins"} fontWeight={600} sx={titleStyles}>
+              {title}
+            </Typography>
+            <Typography color={"#704e8b"} fontFamily={"Poppins"} marginLeft={"auto"} fontWeight={400} sx={captionStyles}>
+              {date}
+            </Typography>
+          </Box>
           <Typography color="mytext" variant="body1" fontFamily={"Poppins"} sx={bodyStyles}>
-            A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking with over 40,000 players.
+            {desc}
           </Typography>
-          <Points points = {points}/>
+          <Points points = {points} date = {date}/>
           <Carousel sources={sources}/>
         </Box>
     </Box>

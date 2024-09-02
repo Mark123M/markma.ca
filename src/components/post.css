@@ -5,7 +5,7 @@ iframe {
 
 .carousel-slide.shown {
   filter: opacity(100%);
-  z-index: 10;
+  z-index: 1;
   transition: filter 0.5s;
 }
 
@@ -13,7 +13,13 @@ iframe {
   filter: opacity(0%);
   width: 0;
   height: 0;
-  z-index: 9;
+  z-index: -1;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none;
 }
 
 .icon.selected {
