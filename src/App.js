@@ -33,8 +33,8 @@ const experiencePosts = [
       "Developing a multiplayer Third Person Shooter game published by Square Enix using C++ and Java"
     ],
     sources: [
-      ["./bg_video.mp4", 1, "forthcoming game"],
-      ["./engine_video.mp4", 1, "proprietary engine"],
+      //["/bg_video.mp4", 1, "forthcoming game"],
+      //["/engine_video.mp4", 1, "proprietary engine"],
     ]
   },
   {
@@ -63,11 +63,11 @@ const projectPosts = [
       "Created a cloud-based 3D model manager using Node.js and PostgreSQL to support CRUD operations"
     ],
     sources: [
-      ["./ash_tree.png", 0, "ash tree"],
-      ["./bush.png", 0, "bush"],
-      ["./flower_plant.png", 0, "flower plant"],
-      ["./weeping_willow.png", 0, "weeping willow"],
-      ["./koch_3.png", 0, "koch curve"]
+      ["/ash_tree.png", 0, "ash tree"],
+      ["/bush.png", 0, "bush"],
+      ["/flower_plant.png", 0, "flower plant"],
+      ["/weeping_willow.png", 0, "weeping willow"],
+      ["/koch_3.png", 0, "koch curve"]
     ]
   },
   {
@@ -78,7 +78,7 @@ const projectPosts = [
       "Implemented melee combat system with frame precise weapon collision mappings and status effects",
       "Built hiearchical state machines to develop character movement, AI behaviours, and object scaling"
     ],
-    sources: [["./knight_shift.mp4", 1, "combat and ai"]]
+    sources: [["/knight_shift.mp4", 1, "combat and ai"]]
   },
   {
     title: "Astroship",
@@ -89,7 +89,7 @@ const projectPosts = [
       "Optimized memory usage by applying object pooling on factory classes to recycle characters and projectiles",
       "Batched component updates by aggregating frequent events to reduce particle and audio emitter calls"
     ],
-    sources: []
+    sources: [["/astroship.mp4", 1, "combat and ai"]]
   },
   {
     title: "Compiler for C++ subset",
@@ -123,13 +123,13 @@ function App() {
         <Bio />
         <Section text={"Experiences"} />
         <Box marginTop={"3px"}></Box>
-        {experiencePosts.map((p) => (
-          <Post title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
+        {experiencePosts.map((p, idx) => (
+          <Post key={`experience-post-` + idx} title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
         ))}
         <Section text={"Projects"} />
         <Box marginTop={"3px"}></Box>
-        {projectPosts.map((p) => (
-          <Post title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
+        {projectPosts.map((p, idx) => (
+          <Post key={`project-post-` + idx} title={p.title} date={p.date} desc={p.desc} points={p.points} sources={p.sources}/>
         ))}
       </Box>
     </Box>

@@ -62,7 +62,7 @@ function Bio() {
   return (
     <Box display={"flex"} width={"100%"} sx = {containerStyles}>
         <Box display={"flex"} sx={faceStyles}>
-            <img src="./face.jpg" style={{width: "100%", height: "auto", objectFit: "contain"}}></img>
+            <img src={process.env.PUBLIC_URL +"/face.jpg"} style={{width: "100%", height: "auto", objectFit: "contain"}}></img>
         </Box>
         <Box display={"flex"} marginLeft={"20px"} flexDirection={"column"} sx = {bioStyles}>
           <Box display={"flex"} justifyContent={"flex-start"} alignItems={"center"}>
