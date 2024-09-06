@@ -28,3 +28,8 @@
   filter: brightness(1.7);
   cursor: pointer
 }
+
+.card:hover {
+  filter: brightness(1.15);
+  cursor: pointer
+}
