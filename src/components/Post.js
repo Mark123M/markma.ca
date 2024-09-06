@@ -145,8 +145,11 @@ function Carousel({sources}) {
                     <img src={process.env.PUBLIC_URL+s[0]} width={"100%"} style={{objectFit: "cover"}}/> :
                     (
                       s[1] == 1?
-                      <iframe src={process.env.PUBLIC_URL+s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe> :
-                      <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                      <video width={"100%"} controls="controls">
+                         <source type="video/mp4" src={process.env.PUBLIC_URL+s[0]}></source>
+                      </video>
+                         :
+                      <iframe src={s[0]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
                     )
                   }
                 </Box>
