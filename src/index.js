@@ -18,8 +18,8 @@ const router = createBrowserRouter([
     element: <Portfolio experiencePosts={allPosts.game.experiencePosts} projectPosts={allPosts.game.projectPosts} />
   },
   {
-    path: "/web",
-    element: <Portfolio experiencePosts={allPosts.web.experiencePosts} projectPosts={allPosts.web.projectPosts} />
+    path: "/general",
+    element: <Portfolio experiencePosts={allPosts.general.experiencePosts} projectPosts={allPosts.general.projectPosts} />
   }
 ])
 

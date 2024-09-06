@@ -66,7 +66,7 @@ function Home() {
         <Section text={"Portfolios"} />
         <Box display={"flex"} marginTop={"2%"}>
             <PCard link={"/game"} title={"Game Programmer Portfolio"} icon={<SportsEsportsIcon className="icon" color="mytext" sx={iconStyles}/>} first={true}/>
-            <PCard link={"/web"} title={"Web Developer Portfolio"}  icon={<LanguageIcon className="icon" color="mytext" sx={iconStyles}/>} />
+            <PCard link={"/general"} title={"General Dev Portfolio"}  icon={<LanguageIcon className="icon" color="mytext" sx={iconStyles}/>} />
         </Box>
       </Box>
     </Box>
