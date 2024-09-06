@@ -5,10 +5,10 @@ import Portfolio from './Portfolio';
 import Home from './Home'
 import { ThemeProvider } from '@emotion/react';
 import mytheme from './theme'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import { allPosts } from './Allposts';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Home/>
