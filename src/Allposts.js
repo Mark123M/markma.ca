@@ -4,27 +4,38 @@ export const allPosts = {
         experiencePosts:
         [
             {
-                title: "Square Enix: Gameplay Programmer Intern",
-                date: "Sep 2024 - present",
-                desc: "Working on gameplay systems and mechanics for an unannounced project",
+                title: "Electronic Arts: Engine Programmer Intern",
+                date: "Incoming Sep 2025 - Dec 2025",
+                desc: "Audio and movie tools for the Frostbite engine",
                 points: [
-                    "Implemented trading mechanic for weapons and consumables in C++ with item validation and memoization",
-                    "Developed stat calculation system for item upgrades and hierarchical buff effects to determine HUD values",
+                ],
+                sources: [
+                ]
+            },
+            {
+                title: "Tactic Studios: Game Programmer Intern",
+                date: "Sep 2024 - Dec 2024",
+                desc: "An unannounced project for Square Enix",
+                points: [
+                    "Developed inventory system in C++ with network replication and LRU cache scheme to sort and trade items",
+                    "Created multiplayer scoreboard with minimap indicators to visualize stats, clues, and spatial data on suspects",
+                    "Improved gunplay mechanics using raycasts and layer masks to handle target validation and weapon collision",
+                    "Implemented stat system calculations and localization tools to embed item upgrades and buff effects in HUD",
                     "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
                 ]
             },
             {
-                title: "AI Arena: Game Programmer Intern",
+                title: "AI Arena: Gameplay Programmer Intern",
                 date: "Jan 2024 - May 2024",
                 desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking",
                 points: [
-                    "Constructed a utility AI system with dynamic response curves to manage behavior trees based on game state and spatial queries, creating 9 opponent agents for 40,000+ players",
+                    "Constructed a utility AI system with Three.js and TypeScript to manage behavior trees for 8 opponent agents",
                     "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
-                    "Built a tutorial NPC with integrated input capture and sequencer tool to edit & replay 12 challenge solutions",
+                    "Built a tutorial NPC with integrated input capture and sequencer tools to edit & replay 12 challenge solutions",
                     "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
-                    "Implemented middleware plugins for hot module replacement to cache 3D models and handle exceptions"
+                    "Developed React development server middleware and refactored circular imports to integrate hot reloading"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
@@ -49,11 +60,22 @@ export const allPosts = {
         projectPosts:
         [
             {
+                title: "GPU Pathtracer",
+                date: "",
+                desc: "A monte carlo pathtracer for rendering and light transport simulations",
+                points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
+                    "Built a Monte Carlo raytracer using C++ to render 3D environments with light transport and BSDF models",
+                    "Implemented an n-dimensional Halton sequence generator for sampling quasirandom values over light paths",
+                    "Used multiple importance sampling with next event estimation on lights and materials to reduce image noise",
+                ],
+                sources: []
+            },
+            {
                 title: "L-Mesh",
                 date: "",
                 desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures",
                 points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
-                    "Implemented a context-free grammar interpreter using Three.js to model 3D structures and simulate motion",
+                    "Implemented a parametric L-system interpreter with Three.js to compute and animate recursive 3D models",
                     "Built a model manager REST API via Node.js & SQL with transactions for operations on tree-based schemas",
                     "Developed a responsive formal language editor in React with error highlighting and 20 customizable presets",
                 ],
@@ -77,7 +99,7 @@ export const allPosts = {
                 sources: [["/astroship.mp4", 1, "combat and ai"]]
             },
             {
-                title: "Compiler for C++ subset",
+                title: "Compiler for C-like language",
                 date: "",
                 desc: "A compiler for translating a subset of C++ features into MIPS machine language",
                 points: [
@@ -106,27 +128,38 @@ export const allPosts = {
         experiencePosts:
         [
             {
-                title: "Square Enix: Gameplay Programmer Intern",
-                date: "Sep 2024 - present",
-                desc: "Working on gameplay systems and mechanics for an unannounced project",
+                title: "Electronic Arts: Engine Programmer Intern",
+                date: "Incoming Sep 2025 - Dec 2025",
+                desc: "Audio and movie tools for the Frostbite engine",
                 points: [
-                    "Implemented trading mechanic for weapons and consumables in C++ with item validation and memoization",
-                    "Developed stat calculation system for item upgrades and hierarchical buff effects to determine HUD values",
+                ],
+                sources: [
+                ]
+            },
+            {
+                title: "Tactic Studios: Game Programmer Intern",
+                date: "Sep 2024 - Dec 2024",
+                desc: "An unannounced project for Square Enix",
+                points: [
+                    "Developed inventory system in C++ with network replication and LRU cache scheme to sort and trade items",
+                    "Created multiplayer scoreboard with minimap indicators to visualize stats, clues, and spatial data on suspects",
+                    "Improved gunplay mechanics using raycasts and layer masks to handle target validation and weapon collision",
+                    "Implemented stat system calculations and localization tools to embed item upgrades and buff effects in HUD",
                     "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
                 ]
             },
             {
-                title: "AI Arena: Game Programmer Intern",
+                title: "AI Arena: Gameplay Programmer Intern",
                 date: "Jan 2024 - May 2024",
                 desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking",
                 points: [
-                    "Constructed a utility AI system with dynamic response curves to manage behavior trees based on game state and spatial queries, creating 9 opponent agents for 40,000+ players",
+                    "Constructed a utility AI system with Three.js and TypeScript to manage behavior trees for 8 opponent agents",
                     "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
-                    "Built a tutorial NPC with integrated input capture and sequencer tool to edit & replay 12 challenge solutions",
+                    "Built a tutorial NPC with integrated input capture and sequencer tools to edit & replay 12 challenge solutions",
                     "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
-                    "Implemented middleware plugins for hot module replacement to cache 3D models and handle exceptions"
+                    "Developed React development server middleware and refactored circular imports to integrate hot reloading"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
@@ -151,12 +184,23 @@ export const allPosts = {
         projectPosts:
         [
             {
+                title: "GPU Pathtracer",
+                date: "",
+                desc: "A monte carlo pathtracer for rendering and light transport simulations",
+                points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
+                    "Built a Monte Carlo raytracer using C++ to render 3D environments with light transport and BSDF models",
+                    "Implemented an n-dimensional Halton sequence generator for sampling quasirandom values over light paths",
+                    "Used multiple importance sampling with next event estimation on lights and materials to reduce image noise",
+                ],
+                sources: []
+            },
+            {
                 title: "L-Mesh",
                 date: "",
                 desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures",
                 points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
+                    "Implemented a parametric L-system interpreter with Three.js to compute and animate recursive 3D models",
                     "Built a model manager REST API via Node.js & SQL with transactions for operations on tree-based schemas",
-                    "Implemented a context-free grammar interpreter using Three.js to model 3D structures and simulate motion",
                     "Developed a responsive formal language editor in React with error highlighting and 20 customizable presets",
                 ],
                 sources: [
@@ -168,7 +212,7 @@ export const allPosts = {
                 ]
             },
             {
-                title: "Compiler for C++ subset",
+                title: "Compiler for C-like language",
                 date: "",
                 desc: "A compiler for translating a subset of C++ features into MIPS machine language",
                 points: [
@@ -196,8 +240,8 @@ export const allPosts = {
                 desc: "A social media app for musicians with user profiles, posts, authentication, media uploads, likes and follows",
                 points: [
                     "Implemented a REST API using Node.js and MongoDB to facilitate content-sharing and user interactions",
-                    "Developed and designed a cross-platform, responsive UI with React and Figma",
-                    "Managed user-uploaded media using AWS S3 to store and deliver up to 25GB of static files"
+                    "Implemented responsive web pages using React and Figma for discussion boards, user profiles, and logins",
+                    "Managed user-uploaded media using AWS S3 and DCT compression to deliver up to 25GB of static files"
                 ],
                 sources: [
                     ["/discussions.png", 0, "discussions page"],
@@ -210,7 +254,7 @@ export const allPosts = {
                 desc: "A Discord plugin for creating auto reminders for ghosted messages and manual reminders for important messages",
                 points: [
                     "Developed and integrated custom modals, notifications, and context menus into Discord using JavaScript by patching native Webpack functions and intercepting DOM events",
-                    "Implemented persistent reminder tracking system by parsing messages into JSON format, indexing each by timestamp, and saving into local files"
+                    "Implemented persistent reminder tracking by parsing messages into JSON format to saving into local files"
                 ],
                 sources: [
                     ["/chatreminder1.png", 0, "reminder context menu"],
