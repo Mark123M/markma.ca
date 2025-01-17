@@ -4,70 +4,75 @@ export const allPosts = {
         experiencePosts:
         [
             {
-                title: "Tactic Studios: Current Game Programmer Intern",
-                date: "Sep 2024 - Jan 2025",
-                desc: "",
+                title: "Square Enix: Gameplay Programmer Intern",
+                date: "Sep 2024 - present",
+                desc: "Working on gameplay systems and mechanics for an unannounced project",
                 points: [
-                    "Developing a multiplayer Third Person Shooter game published by Square Enix using C++ and Java"
+                    "Implemented trading mechanic for weapons and consumables in C++ with item validation and memoization",
+                    "Developed stat calculation system for item upgrades and hierarchical buff effects to determine HUD values",
+                    "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
-                    //["/bg_video.mp4", 1, "forthcoming game"],
-                    //["/engine_video.mp4", 1, "proprietary engine"],
                 ]
             },
             {
                 title: "AI Arena: Game Programmer Intern",
                 date: "Jan 2024 - May 2024",
-                desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking with over 40,000 players.",
+                desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking",
                 points: [
-                    "Constructed a modular utility AI system by applying dynamic response curves to score and execute behavior tree nodes, building 9 opponent agents for challenge arenas",
-                    "Created aerial dodge, grab, and throw with improved AABB collision responses and a new combo system",
-                    "Built a tutorial NPC with integrated input capturer and sequencer tool to edit & replay 12 challenge solutions",
-                    "Profiled and optimized asset pipeline by abstracting resource loading and disposal into mandatory lifecycle methods for 45 game entity classes, resolving WebGL memory leaks of 4MB/match",
-                    "Developed middleware plugins for hot module replacement by applying fallback behavior to active modules during code updates, caching 3D scenes and reducing reload times by 40-fold"
+                    "Constructed a utility AI system with dynamic response curves to manage behavior trees based on game state and spatial queries, creating 9 opponent agents for 40,000+ players",
+                    "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
+                    "Built a tutorial NPC with integrated input capture and sequencer tool to edit & replay 12 challenge solutions",
+                    "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
+                    "Implemented middleware plugins for hot module replacement to cache 3D models and handle exceptions"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
                 ]
-            }
+            },
+            {
+                title: "eButterfly: Software Developer Intern",
+                date: "May 2023 – Sep 2023",
+                desc: "A data-driven platform for collecting and analyzing butterfly distribution, phenology, and flight patterns",
+                points: [
+                    "Developed geospatial heatmaps for butterfly observations using Python and PostgreSQL by applying grid-based aggregation to cap plotted geometries for 500,000+ data points",
+                    "Built data import system with Node.js and React to extract and validate CSV rows with database schemas",
+                    "Implemented SSO and automated post creation to integrate discussion forum with main site for 4,000+ users",
+                    "Created a taxonomy dashboard via recursive form components & lazy loading for 22,000+ butterfly species",
+                ],
+                sources: [
+                    ["/heatmap.png", 0, "Geospatial Heatmap"],
+                    ["/eb.png", 0, "eButterfly"],
+                ]
+            },
         ],
         projectPosts:
         [
             {
                 title: "L-Mesh",
                 date: "",
-                desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures.",
-                points: [
-                "Implemented a context-free grammar interpreter using Three.js to draw 3D structures and simulate motion",
-                "Developed a responsive formal language editor in Typescript with error highlighting and 20 customizable presets",
-                "Created a cloud-based 3D model manager using Node.js and PostgreSQL to support CRUD operations"
+                desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures",
+                points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
+                    "Implemented a context-free grammar interpreter using Three.js to model 3D structures and simulate motion",
+                    "Built a model manager REST API via Node.js & SQL with transactions for operations on tree-based schemas",
+                    "Developed a responsive formal language editor in React with error highlighting and 20 customizable presets",
                 ],
                 sources: [
-                ["/ash_tree.png", 0, "ash tree"],
-                ["/bush.png", 0, "bush"],
-                ["/flower_plant.png", 0, "flower plant"],
-                ["/weeping_willow.png", 0, "weeping willow"],
-                ["/koch_3.png", 0, "koch curve"]
+                    ["/ash_tree.png", 0, "ash tree"],
+                    ["/bush.png", 0, "bush"],
+                    ["/flower_plant.png", 0, "flower plant"],
+                    ["/weeping_willow.png", 0, "weeping willow"],
+                    ["/koch_3.png", 0, "koch curve"]
                 ]
-            },
-            {
-                title: "Knight Shift (GMTK Game Jam)",
-                date: "",
-                desc: "A size-scaling action platformer game for the GMTK 2024 game jam.",
-                points: [
-                "Implemented melee combat system with frame precise weapon collision mappings and status effects",
-                "Built hiearchical state machines to develop character movement, AI behaviours, and object scaling"
-                ],
-                sources: [["/knight_shift.mp4", 1, "combat and ai"]]
             },
             {
                 title: "Astroship",
                 date: "",
-                desc: "A top-down space shooter game with physics-based weapons and enemies.",
+                desc: "A top-down space shooter game with physics-based weapons and enemies",
                 points: [
                 "Developed all game mechanics and art, including characters, controls, camera, combat, and environment",
-                "Optimized memory usage by applying object pooling on factory classes to recycle characters and projectiles",
-                "Batched component updates by aggregating frequent events to reduce particle and audio emitter calls"
+                "Optimized C# memory usage by applying object pooling on factory classes to recycle game entities",
+                "Batched component updates using an event queue by aggregating frequent particle and audio emitter calls"
                 ],
                 sources: [["/astroship.mp4", 1, "combat and ai"]]
             },
@@ -86,14 +91,14 @@ export const allPosts = {
             {
                 title: "Chess Engine",
                 date: "",
-                desc: "A C++ chess engine built using OOP principles and MVC architecture.",
+                desc: "A C++ chess engine built using OOP principles and MVC architecture",
                 points: [
                 "Created AI players using an alpha-beta searching algorithm with iterative deepening to evaluate new moves",
                 "Developed a legal move generator with bit encoding to calculate and benchmark over 1.6M moves per sec",
                 "Implemented an XWindow GUI using the observer pattern with customizable boards and 5 difficulty settings"
                 ],
                 sources: []
-            }
+            },
         ]
     },
     general:
@@ -101,27 +106,27 @@ export const allPosts = {
         experiencePosts:
         [
             {
-                title: "Tactic Studios: Current Game Programmer Intern",
-                date: "Sep 2024 - Jan 2025",
-                desc: "",
+                title: "Square Enix: Gameplay Programmer Intern",
+                date: "Sep 2024 - present",
+                desc: "Working on gameplay systems and mechanics for an unannounced project",
                 points: [
-                    "Developing a multiplayer Third Person Shooter game published by Square Enix using C++ and Java"
+                    "Implemented trading mechanic for weapons and consumables in C++ with item validation and memoization",
+                    "Developed stat calculation system for item upgrades and hierarchical buff effects to determine HUD values",
+                    "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
-                    //["/bg_video.mp4", 1, "forthcoming game"],
-                    //["/engine_video.mp4", 1, "proprietary engine"],
                 ]
             },
             {
                 title: "AI Arena: Game Programmer Intern",
                 date: "Jan 2024 - May 2024",
-                desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking with over 40,000 players.",
+                desc: "A platform fighter game where players train reinforcement learning agents to compete in ranked matchmaking",
                 points: [
-                    "Constructed a modular utility AI system using TypeScript by applying dynamic response curves to score and execute behavior tree nodes, building 9 opponent agents for evaluating over 40,000+ players",
-                    "Developed middleware plugins in React for hot module replacement by integrating fallback behavior to active modules during code updates, caching 3D scenes and reducing reload times by 40-fold",
-                    "Profiled and optimized asset pipeline by abstracting resource loading and disposal into mandatory lifecycle methods for 45 game entity classes, resolving WebGL memory leaks of 4MB/match",
-                    "Implemented a self-play training gamemode for reinforcement learning agents to assess & update policies",
-                    "Built a tutorial NPC with integrated input capturer and sequencer tool to edit & replay 12 challenge solutions",
+                    "Constructed a utility AI system with dynamic response curves to manage behavior trees based on game state and spatial queries, creating 9 opponent agents for 40,000+ players",
+                    "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
+                    "Built a tutorial NPC with integrated input capture and sequencer tool to edit & replay 12 challenge solutions",
+                    "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
+                    "Implemented middleware plugins for hot module replacement to cache 3D models and handle exceptions"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
@@ -130,12 +135,12 @@ export const allPosts = {
             {
                 title: "eButterfly: Software Developer Intern",
                 date: "May 2023 – Sep 2023",
-                desc: "A data-driven platform for collecting and analyzing butterfly distribution, phenology, and flight patterns.",
+                desc: "A data-driven platform for collecting and analyzing butterfly distribution, phenology, and flight patterns",
                 points: [
-                    "Developed geospatial heatmaps for butterfly observations using Python and PostgreSQL by applying grid-based aggregation to cap plotted geometries for 500,000 data points",
-                    "Implemented a bulk data import system with Node.js and React by extracting and validating CSV rows with DB schemas, resulting in 5000+ new observations from 2 research teams",
-                    "Created a taxonomy dashboard via recursive form components and lazy loading for 2,000+ butterfly species",
-                    "Deployed Python microservices for flight data visualizations using FastAPI endpoints and Docker containers",
+                    "Developed geospatial heatmaps for butterfly observations using Python and PostgreSQL by applying grid-based aggregation to cap plotted geometries for 500,000+ data points",
+                    "Built data import system with Node.js and React to extract and validate CSV rows with database schemas",
+                    "Implemented SSO and automated post creation to integrate discussion forum with main site for 4,000+ users",
+                    "Created a taxonomy dashboard via recursive form components & lazy loading for 22,000+ butterfly species",
                 ],
                 sources: [
                     ["/heatmap.png", 0, "Geospatial Heatmap"],
@@ -148,11 +153,11 @@ export const allPosts = {
             {
                 title: "L-Mesh",
                 date: "",
-                desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures.",
+                desc: "A 3D procedural generation tool using stochastic and parametric l-systems for modelling complex structures",
                 points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
-                    "Created a cloud-based 3D model manager using Node.js and PostgreSQL to support CRUD operations",
+                    "Built a model manager REST API via Node.js & SQL with transactions for operations on tree-based schemas",
+                    "Implemented a context-free grammar interpreter using Three.js to model 3D structures and simulate motion",
                     "Developed a responsive formal language editor in React with error highlighting and 20 customizable presets",
-                    "Implemented a context-free grammar interpreter using Three.js to draw 3D structures and simulate motion",
                 ],
                 sources: [
                     ["/ash_tree.png", 0, "ash tree"],
@@ -177,7 +182,7 @@ export const allPosts = {
             {
                 title: "Chess Engine",
                 date: "",
-                desc: "A C++ chess engine built using OOP principles and MVC architecture.",
+                desc: "A C++ chess engine built using OOP principles and MVC architecture",
                 points: [
                 "Created AI players using an alpha-beta searching algorithm with iterative deepening to evaluate new moves",
                 "Developed a legal move generator with bit encoding to calculate and benchmark over 1.6M moves per sec",
@@ -202,7 +207,7 @@ export const allPosts = {
             {
                 title: "ChatReminder",
                 date: "",
-                desc: "A Discord plugin for creating auto reminders for ghosted messages and manual reminders for important messages.",
+                desc: "A Discord plugin for creating auto reminders for ghosted messages and manual reminders for important messages",
                 points: [
                     "Developed and integrated custom modals, notifications, and context menus into Discord using JavaScript by patching native Webpack functions and intercepting DOM events",
                     "Implemented persistent reminder tracking system by parsing messages into JSON format, indexing each by timestamp, and saving into local files"
@@ -216,14 +221,14 @@ export const allPosts = {
             {
                 title: "Astroship",
                 date: "",
-                desc: "A top-down space shooter game with physics-based weapons and enemies.",
+                desc: "A top-down space shooter game with physics-based weapons and enemies",
                 points: [
                 "Developed all game mechanics and art, including characters, controls, camera, combat, and environment",
-                "Optimized memory usage by applying object pooling on factory classes to recycle characters and projectiles",
-                "Batched component updates by aggregating frequent events to reduce particle and audio emitter calls"
+                "Optimized C# memory usage by applying object pooling on factory classes to recycle game entities",
+                "Batched component updates using an event queue by aggregating frequent particle and audio emitter calls"
                 ],
                 sources: [["/astroship.mp4", 1, "combat and ai"]]
-            },
+            }
 
         ]
     }
