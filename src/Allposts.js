@@ -21,7 +21,6 @@ export const allPosts = {
                     "Created multiplayer scoreboard with minimap indicators to visualize stats, clues, and spatial data on suspects",
                     "Improved gunplay mechanics using raycasts and layer masks to handle target validation and weapon collision",
                     "Implemented stat system calculations and localization tools to embed item upgrades and buff effects in HUD",
-                    "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
                 ]
@@ -35,7 +34,6 @@ export const allPosts = {
                     "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
                     "Built a tutorial NPC with integrated input capture and sequencer tools to edit & replay 12 challenge solutions",
                     "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
-                    "Developed React development server middleware and refactored circular imports to integrate hot reloading"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
@@ -60,7 +58,7 @@ export const allPosts = {
         projectPosts:
         [
             {
-                title: "GPU Pathtracer",
+                title: "GPU Raytracer",
                 date: "",
                 desc: "A monte carlo pathtracer for rendering and light transport simulations",
                 points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
@@ -145,7 +143,6 @@ export const allPosts = {
                     "Created multiplayer scoreboard with minimap indicators to visualize stats, clues, and spatial data on suspects",
                     "Improved gunplay mechanics using raycasts and layer masks to handle target validation and weapon collision",
                     "Implemented stat system calculations and localization tools to embed item upgrades and buff effects in HUD",
-                    "Integrated animations and UI for resizing puzzle game by calculating border anchor points and grid snap"
                 ],
                 sources: [
                 ]
@@ -159,7 +156,6 @@ export const allPosts = {
                     "Developed aerial dodge, grab, and throw via finite state machines, applying framedata & collision responses",
                     "Built a tutorial NPC with integrated input capture and sequencer tools to edit & replay 12 challenge solutions",
                     "Optimized asset pipeline by abstracting resource loading and disposal to fix WebGL memleaks of 4MB/match",
-                    "Developed React development server middleware and refactored circular imports to integrate hot reloading"
                 ],
                 sources: [
                     ["https://www.youtube.com/embed/xcXjY55xUVY?si=CNpcwYgSy0OYxcRS", 2, "AI Arena"],
@@ -184,7 +180,7 @@ export const allPosts = {
         projectPosts:
         [
             {
-                title: "GPU Pathtracer",
+                title: "GPU Raytracer",
                 date: "",
                 desc: "A monte carlo pathtracer for rendering and light transport simulations",
                 points: [ // maybe talk about using transactions to validate and protect data for tree-based schemas
